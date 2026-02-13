@@ -1,0 +1,141 @@
+/* --- style.css --- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Pixelify Sans', sans-serif;
+    background: linear-gradient(135deg, #9bd1ef 0%, #9bd1ef 99%, #9bd1ef 100%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.bg-heart {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.5);
+    animation: float 6s infinite ease-in-out;
+    z-index: 0;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+    50% { opacity: 0.8; }
+    100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 320px;
+    width: 85%;
+    z-index: 10;
+    position: relative;
+    backdrop-filter: blur(5px);
+}
+
+.cat1 {
+    margin-top: -5%;
+    width: 70%;
+
+}
+
+footer {
+    position: absolute;
+    bottom: 40px; /* Distanza dal bordo inferiore */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 5; /* Sopra lo sfondo, sotto la card */
+}
+
+.footer-text {
+    font-size: 0.8rem;
+    color: #06001f;
+    font-weight: 400;
+    opacity: 0.8;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.5);
+}
+
+h1 {
+    font-family: 'Shadows Into Light Two', cursive;
+    color: #058ed9;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Classe per nascondere gli elementi */
+.hidden {
+    display: none !important;
+}
+
+.option-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    background: white;
+    border: 2px solid #cde8f7;
+    padding: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.5);
+    margin-right: 15px;
+    accent-color: #058ed9;
+}
+
+#submit-btn {
+    background: #058ed9;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-family: 'Shadows Into Light Two', 'sans serif';
+    font-size: 1rem;
+    font-weight: 600;
+    display: none; 
+    width: 100%;
+}
+
+#fake-error {
+    display: none;
+    background-color: #ffe6e6;
+    color: #cc0000;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    margin-top: 15px;
+    border: 1px solid #ffcccc;
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.big-heart {
+    font-size: 4rem;
+    display: block;
+    animation: beat 1s infinite;
+}
+
+@keyframes beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
